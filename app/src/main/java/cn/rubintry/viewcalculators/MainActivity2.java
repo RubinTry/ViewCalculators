@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import java.math.BigDecimal;
 
+import cn.rubintry.calculator.ViewCalculator;
+
 public class MainActivity2 extends AppCompatActivity {
 
     private TextView tvResult;

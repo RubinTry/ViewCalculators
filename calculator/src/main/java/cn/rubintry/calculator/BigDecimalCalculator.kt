@@ -1,4 +1,4 @@
-package cn.rubintry.viewcalculators
+package cn.rubintry.calculator
 
 import android.widget.TextView
 import java.math.BigDecimal
@@ -7,7 +7,7 @@ import java.math.BigDecimal
 /**
  * 高精度浮点计算器
  */
-class BigDecimalCalculator : BaseCalculator<BigDecimal>() , ICalculator<BigDecimal>  {
+class BigDecimalCalculator : BaseCalculator<BigDecimal>() , ICalculator<BigDecimal> {
 
     override fun forcePositive(): BigDecimalCalculator {
         forcePositive = true
@@ -127,7 +127,7 @@ class BigDecimalCalculator : BaseCalculator<BigDecimal>() , ICalculator<BigDecim
         return this
     }
 
-    override fun into(vararg target: TextView?) : BigDecimalCalculator{
+    override fun into(vararg target: TextView?) : BigDecimalCalculator {
         assert(resultModule != null){"请先调用加减乘除方法"}
         for (textView in target) {
             textView?.text = resultModule?.getNumberFromView()

@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import cn.rubintry.calculator.ViewCalculator
 import java.math.BigDecimal
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private var str = "sfdfffsd-123bddsdas-123sadasd0.23"
     private var tvParam1: TextView ?= null
     private var tvParam2: TextView ?= null
     private var tvResult: TextView ?= null

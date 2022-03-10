@@ -1,4 +1,4 @@
-package cn.rubintry.viewcalculators
+package cn.rubintry.calculator
 
 final class ViewCalculator {
 

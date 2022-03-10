@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 rootProject.name = "ViewCalculators"
 include ':app'
 include ':test'
+include ':calculator'

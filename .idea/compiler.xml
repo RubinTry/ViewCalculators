@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="ViewCalculators.app" target="11" />
+      <module name="ViewCalculators.calculator" target="1.8" />
+      <module name="ViewCalculators.calculatorLibrary" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

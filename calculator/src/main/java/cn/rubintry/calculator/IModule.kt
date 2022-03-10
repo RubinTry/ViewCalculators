@@ -1,4 +1,4 @@
-package cn.rubintry.viewcalculators
+package cn.rubintry.calculator
 
 import android.widget.TextView
 
@@ -11,9 +11,9 @@ interface IModule<T : Number> {
 
     fun subtract(value: IModule<T>) : String
 
-    fun multiply(value: IModule<T> , scale: Int = 0) : String
+    fun multiply(value: IModule<T>, scale: Int = 0) : String
 
-    fun divide(value: IModule<T> , scale: Int = 0): String
+    fun divide(value: IModule<T>, scale: Int = 0): String
 
     fun appendUnit(unit: String)
 

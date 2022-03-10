@@ -1,7 +1,6 @@
-package cn.rubintry.viewcalculators
+package cn.rubintry.calculator
 
 import android.widget.TextView
-import java.math.BigDecimal
 import java.util.regex.Pattern
 
 open class BaseCalculator<T: Number> {
@@ -23,7 +22,7 @@ open class BaseCalculator<T: Number> {
      * @param N
      * @property textView
      */
-    inner class DefaultModule<N : Number>(override var textView: TextView?) : IModule<N>{
+    inner class DefaultModule<N : Number>(override var textView: TextView?) : IModule<N> {
         private var result = "0"
         private var unit: String = ""
 
