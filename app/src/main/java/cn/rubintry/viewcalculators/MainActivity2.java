@@ -20,9 +20,9 @@ public class MainActivity2 extends AppCompatActivity {
         tvResult = findViewById(R.id.tv_result);
         ViewCalculator.with(BigDecimal.class)
                 .add("123")
-                .subtract("23")
+                .subtract(23)
                 .multiply("100.01" , 2)
-                .divide("3" , 2)
+                .divide(3 , 2)
                 .into(tvResult);
     }
 }

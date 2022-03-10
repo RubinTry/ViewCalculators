@@ -1,6 +1,7 @@
 package cn.rubintry.calculator
 
 import android.widget.TextView
+import java.math.BigDecimal
 
 
 class IntegerCalculator : BaseCalculator<Int>(), ICalculator<Int> {
@@ -32,6 +33,10 @@ class IntegerCalculator : BaseCalculator<Int>(), ICalculator<Int> {
             is Double -> {
                 resultModule?.add(IntegerModule(value.toInt().toString()))
             }
+
+            is BigDecimal -> {
+                resultModule?.add(IntegerModule(value.toInt().toString()))
+            }
         }
         return this
     }
@@ -56,7 +61,11 @@ class IntegerCalculator : BaseCalculator<Int>(), ICalculator<Int> {
             }
 
             is Double -> {
-                resultModule?.add(IntegerModule(value.toInt().toString()))
+                resultModule?.subtract(IntegerModule(value.toInt().toString()))
+            }
+
+            is BigDecimal -> {
+                resultModule?.subtract(IntegerModule(value.toInt().toString()))
             }
         }
         return this
@@ -82,7 +91,11 @@ class IntegerCalculator : BaseCalculator<Int>(), ICalculator<Int> {
             }
 
             is Double -> {
-                resultModule?.add(IntegerModule(value.toInt().toString()))
+                resultModule?.multiply(IntegerModule(value.toInt().toString()))
+            }
+
+            is BigDecimal -> {
+                resultModule?.multiply(IntegerModule(value.toInt().toString()))
             }
         }
         return this
@@ -109,7 +122,11 @@ class IntegerCalculator : BaseCalculator<Int>(), ICalculator<Int> {
             }
 
             is Double -> {
-                resultModule?.add(IntegerModule(value.toInt().toString()))
+                resultModule?.divide(IntegerModule(value.toInt().toString()))
+            }
+
+            is BigDecimal -> {
+                resultModule?.divide(IntegerModule(value.toInt().toString()))
             }
         }
         return this

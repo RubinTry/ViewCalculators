@@ -61,7 +61,7 @@ class BigDecimalCalculator : BaseCalculator<BigDecimal>() , ICalculator<BigDecim
             }
 
             is Double -> {
-                resultModule?.add(BigDecimalModule(value.toString()))
+                resultModule?.subtract(BigDecimalModule(value.toString()))
             }
         }
         return this
@@ -88,7 +88,7 @@ class BigDecimalCalculator : BaseCalculator<BigDecimal>() , ICalculator<BigDecim
             }
 
             is Double -> {
-                resultModule?.add(BigDecimalModule(value.toString()))
+                resultModule?.multiply(BigDecimalModule(value.toString()))
             }
         }
         return this
@@ -115,7 +115,7 @@ class BigDecimalCalculator : BaseCalculator<BigDecimal>() , ICalculator<BigDecim
             }
 
             is Double -> {
-                resultModule?.add(BigDecimalModule(value.toString()))
+                resultModule?.divide(BigDecimalModule(value.toString()))
             }
         }
         return this
