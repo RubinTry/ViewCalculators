@@ -1,17 +1,23 @@
 package cn.rubintry.viewcalculators
 
 import android.widget.TextView
-import java.math.BigDecimal
 
 
-interface IModule {
+interface IModule<T : Number> {
+
     var textView : TextView?
 
-    fun add(value: IModule)
+    fun add(value: IModule<T>) : String
 
-    fun getNumberFromView() : Any
-}
+    fun subtract(value: IModule<T>) : String
 
-inline fun <reified T : Number> IModule.getNumber(): T {
-    return ValueCaster.cast(textView?.text ?: "0")
+    fun multiply(value: IModule<T> , scale: Int = 0) : String
+
+    fun divide(value: IModule<T> , scale: Int = 0): String
+
+    fun appendUnit(unit: String)
+
+    fun getNumberFromView() : String
+
+    override fun toString() : String
 }
